@@ -1,5 +1,5 @@
 {
-  "name": "billamanjaro",
+  "name": "billimanjaro",
   "version": "0.0.1",
   "description": "A nodejs based billing system",
   "main": "src/index.js",
@@ -12,19 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billamanjaro/billamanjaro.git"
+    "url": "git+https://github.com/billimanjaro/billimanjaro.git"
   },
   "keywords": [
     "billing",
     "stripe",
     "api"
   ],
-  "author": "Jeff Hubbard <lord2800@gmail.com> (https://github.com/lord2800)",
+  "author": "Billimanjaro Team (https://github.com/billimanjaro)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/billamanjaro/billamanjaro/issues"
+    "url": "https://github.com/billimanjaro/billimanjaro/issues"
   },
-  "homepage": "https://github.com/billamanjaro/billamanjaro#readme",
+  "homepage": "https://github.com/billimanjaro/billimanjaro#readme",
   "devDependencies": {
     "coveralls": "^2.11.4",
     "istanbul": "^0.3.18",
