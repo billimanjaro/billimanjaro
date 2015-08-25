@@ -4,7 +4,7 @@
   "description": "A nodejs based billing system",
   "main": "src/index.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --recursive && if [[ $CI = \"true\" ]]; then cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js; fi && rm -rf ./coverage",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --recursive && if [ \"$CI\" = \"true\" ]; then cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js; fi && rm -rf ./coverage",
     "start": "node src/index.js"
   },
   "config": {
