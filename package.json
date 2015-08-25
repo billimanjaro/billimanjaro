@@ -1,0 +1,37 @@
+{
+  "name": "billamanjaro",
+  "version": "0.0.1",
+  "description": "A nodejs based billing system",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --recursive && if [[ $CI = \"true\" ]]; then cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js; fi && rm -rf ./coverage",
+    "start": "node src/index.js"
+  },
+  "config": {
+    "port": 6000
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billamanjaro/billamanjaro.git"
+  },
+  "keywords": [
+    "billing",
+    "stripe",
+    "api"
+  ],
+  "author": "Jeff Hubbard <lord2800@gmail.com> (https://github.com/lord2800)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billamanjaro/billamanjaro/issues"
+  },
+  "homepage": "https://github.com/billamanjaro/billamanjaro#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.3.18",
+    "mocha": "^2.2.5",
+    "mocha-istanbul": "^0.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
