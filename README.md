@@ -4,6 +4,7 @@ A nodejs based billing system
 [![Build Status](https://img.shields.io/travis/billimanjaro/billimanjaro.svg)](https://travis-ci.org/billimanjaro/billimanjaro)
 [![Dependency Status](https://img.shields.io/david/billimanjaro/billimanjaro.svg)](https://david-dm.org/billimanjaro/billamanjaro)
 [![Coverage](https://img.shields.io/coveralls/billimanjaro/billimanjaro.svg)](https://coveralls.io/r/billimanjaro/billimanjaro)
+[![Coverity Status](https://img.shields.io/coverity/scan/6168.svg)]()
 
 ## Requirements
 - Node.js v0.12.x, IO.js (any version)
