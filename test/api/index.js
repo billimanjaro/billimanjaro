@@ -1,8 +1,8 @@
 var assert = require('assert');
 
-describe('Main module', function () {
+describe('API module', function () {
 	it('should export the app object', function () {
-		var app = require('../src');
+		var app = require('../../src/api');
 		assert.equal(true, !!app);
 	});
 });
