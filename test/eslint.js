@@ -1,3 +1,3 @@
-require('mocha-eslint')(['src/**/*.js', 'test/**/*.js'], {
+require('mocha-eslint')(['src/**/*.js', 'test/**/*.js', 'server.js'], {
 	title: 'Lint rules'
 });
