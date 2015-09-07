@@ -11,7 +11,7 @@ var accountStub = {
 		"id": "webhost-1",
 		"visible": false,
 		"interval": [
-			{ "type": "month", "duration": 1, "price": 29.95 },
+			{ "type": "month", "duration": 1, "price": 29.95, "selected": true },
 			{ "type": "year", "duration": 2, "price": 650.99 }
 		],
 		"features": [{
@@ -19,36 +19,8 @@ var accountStub = {
 			"id": "basic-site-no-frills",
 			"class": "basic-site",
 			"visible": false,
-			"interval": [
-				{ "type": "day", "duration": 1, "price": 1.5 },
-				{ "type": "month", "duration": 1, "price": 29.95 },
-				{ "type": "year", "duration": 1, "price": 350 }
-			],
 			"dependencies": ["basic-site"]
 		}]
-	}],
-	"features": [{
-		"name": "More users",
-		"id": "user-increase",
-		"class": "users",
-		"visible": true,
-		"interval": [
-			{ "type": "day", "duration": 1, "price": 1.5 },
-			{ "type": "month", "duration": 1, "price": 29.95 },
-			{ "type": "year", "duration": 1, "price": 350 }
-		],
-		"dependencies": ["basic-site"]
-	}, {
-		"name": "Even moar users",
-		"id": "user-increase-x2",
-		"class": "users",
-		"visible": true,
-		"interval": [
-			{ "type": "day", "duration": 1, "price": 1.5 },
-			{ "type": "month", "duration": 1, "price": 29.95 },
-			{ "type": "year", "duration": 1, "price": 350 }
-		],
-		"dependencies": ["basic-site"]
 	}]
 };
 
