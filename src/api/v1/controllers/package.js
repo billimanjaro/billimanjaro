@@ -22,21 +22,19 @@ var packageStub = {
 
 function PackageController() {/* this space intentionally left blank */}
 
-var proto = PackageController.prototype;
-
-proto.list = function (req, res) {
+PackageController.prototype.list = function (req, res) {
 	res.status(200).send([packageStub, packageStub, packageStub]);
 };
 
-proto.get = function (req, res) {
+PackageController.prototype.get = function (req, res) {
 	res.status(200).send(packageStub);
 };
 
-proto.post = function (req, res) {
+PackageController.prototype.post = function (req, res) {
 	res.status(200).send(packageStub);
 };
 
-proto.delete = function (req, res) {
+PackageController.prototype.delete = function (req, res) {
 	res.status(204).send();
 };
 

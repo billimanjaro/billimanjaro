@@ -13,22 +13,20 @@ var featureStub = {
 
 function FeatureController() {/* this space intentionally left blank */}
 
-var proto = FeatureController.prototype;
-
-proto.list = function (req, res) {
-	res.send(200).send([featureStub, featureStub, featureStub, featureStub, featureStub]);
+FeatureController.prototype.list = function (req, res) {
+	res.status(200).send([featureStub, featureStub, featureStub, featureStub, featureStub]);
 };
 
-proto.get = function (req, res) {
-	res.send(200).send(featureStub);
+FeatureController.prototype.get = function (req, res) {
+	res.status(200).send(featureStub);
 };
 
-proto.post = function (req, res) {
-	res.send(200).send(featureStub);
+FeatureController.prototype.post = function (req, res) {
+	res.status(200).send(featureStub);
 };
 
-proto.delete = function (req, res) {
-	res.send(204).send();
+FeatureController.prototype.delete = function (req, res) {
+	res.status(204).send();
 };
 
 module.exports = new FeatureController();
