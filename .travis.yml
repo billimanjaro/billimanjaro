@@ -4,4 +4,16 @@ node_js:
 - '0.12'
 cache:
   directories:
-    - node_modules
+  - node_modules
+env:
+  global:
+    secure: nVVJ+0/ZnZ6UusDLebf4Nd8eIP5Omj4ogJ+x/lzBOgzy8jZRV7KktEEjnrefFbzV5ICZomVdgNXuJyGJyQsjy2R3nMP5TnJ+abd6Fcpi6dp4MIQc7KmnRKLo1qg/Tdue3T93bXSNZht73Fm6M/jSkFswsBQHS+OfCnZbSEkEc7CmESTJRHeGleUAzRJho0Di/FPm4JV4w1tQJLVw/lSd1PR9ucHEwxaUiMRgWO1ttOg7rv7c55tc9zx4FMgvyUe1v0oSNRN8TTJYLNO2I6SOMcuyLYkwgHNjMvuHl0vO6BeCRq1Ys8S3zvKFtk9nQnceHc6sMSI5aQCJrqji5MQLiy48KVbOEfmm+jJ6KkM3ZUGg0cS+ijRcCHWEDzOs9TXlaDyvEuhR7RcHvRXsO5ZI0ijFATla7cWKqzKwhPCFoZimi2mOHRp+d3WOHqt0k2DBKFHE9ZBwKKEgQf4vh3XQPsL3UCvdBpunwmdFMnrxLPhLqSxGhP604hvUC4heFbY9KKKpncoQmYu5rll0nk1ADU6hIYmjFUQm3czn+NiC2rnpf9yACSw+OybzBK00Bn8Hu58unIkbJp1sf9KOyN+14pJkg3FPvuhdfAfeoNJuyTB5c4yTbs1Z6L+5ccTUrUJc1cMmgk/h1YQLwJLHjH3ykCDFtEYA1x3cIt8rzQpbcgA=
+addons:
+  coverity_scan:
+    project:
+      name: "billimanjaro/billimanjaro"
+      description: "A nodejs based billing system"
+    notification_email: lord2800@gmail.com
+    build_command_prepend: "npm install"
+    build_command:   "npm test"
+    branch_pattern: "tags/*"
