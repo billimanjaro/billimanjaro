@@ -16,4 +16,4 @@ addons:
     notification_email: lord2800@gmail.com
     build_command_prepend: "npm install"
     build_command:   "npm test"
-    branch_pattern: "tags/*"
+    branch_pattern: "tags/\.*"
