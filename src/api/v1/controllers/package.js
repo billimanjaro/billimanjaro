@@ -1,6 +1,3 @@
-var express = require('express');
-var route = module.exports = express.Router();
-
 var packageStub = {
 	"name": "Simple Webhosting",
 	"id": "webhost-1",
@@ -23,18 +20,24 @@ var packageStub = {
 	}]
 };
 
-route.get('/', function (req, res) {
+function PackageController() {/* this space intentionally left blank */}
+
+var proto = PackageController.prototype;
+
+proto.list = function (req, res) {
 	res.status(200).send([packageStub, packageStub, packageStub]);
-});
+};
 
-route.get('/:id', function (req, res) {
+proto.get = function (req, res) {
 	res.status(200).send(packageStub);
-});
+};
 
-route.post('/', function (req, res) {
+proto.post = function (req, res) {
 	res.status(200).send(packageStub);
-});
+};
 
-route.delete('/', function (req, res) {
+proto.delete = function (req, res) {
 	res.status(204).send();
-});
+};
+
+module.exports = new PackageController();

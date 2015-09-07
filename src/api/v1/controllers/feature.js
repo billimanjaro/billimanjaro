@@ -1,6 +1,3 @@
-var express = require('express');
-var route = module.exports = express.Router();
-
 var featureStub = {
 	"name": "More users",
 	"id": "user-increase",
@@ -14,18 +11,24 @@ var featureStub = {
 	"dependencies": ["basic-site"]
 };
 
-route.get('/', function (req, res) {
+function FeatureController() {/* this space intentionally left blank */}
+
+var proto = FeatureController.prototype;
+
+proto.list = function (req, res) {
 	res.send(200).send([featureStub, featureStub, featureStub, featureStub, featureStub]);
-});
+};
 
-route.get('/:id', function (req, res) {
+proto.get = function (req, res) {
 	res.send(200).send(featureStub);
-});
+};
 
-route.post('/', function (req, res) {
+proto.post = function (req, res) {
 	res.send(200).send(featureStub);
-});
+};
 
-route.delete('/', function (req, res) {
+proto.delete = function (req, res) {
 	res.send(204).send();
-});
+};
+
+module.exports = new FeatureController();

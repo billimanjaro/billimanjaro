@@ -1,6 +1,3 @@
-var express = require('express');
-var route = module.exports = express.Router();
-
 var accountStub = {
 	"id": "abc123",
 	"owner": {
@@ -55,22 +52,26 @@ var accountStub = {
 	}]
 };
 
-route.get('/', function (req, res) {
+function AccountController() {/* this space intentionally left blank */}
+
+AccountController.prototype.list = function (req, res) {
 	res.status(200).send([accountStub, accountStub]);
-});
+};
 
-route.get('/:id', function (req, res) {
+AccountController.prototype.get = function (req, res) {
 	res.status(200).send(accountStub);
-});
+};
 
-route.put('/:id', function (req, res) {
+AccountController.prototype.put = function (req, res) {
 	res.status(200).send(accountStub);
-});
+};
 
-route.post('/', function (req, res) {
+AccountController.prototype.post = function (req, res) {
 	res.status(200).send(accountStub);
-});
+};
 
-route.delete('/', function (req, res) {
+AccountController.prototype.delete = function (req, res) {
 	res.status(204).send();
-});
+};
+
+module.exports = new AccountController();
