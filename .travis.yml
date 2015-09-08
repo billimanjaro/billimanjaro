@@ -11,9 +11,12 @@ env:
 addons:
   coverity_scan:
     project:
-      name: "billimanjaro/billimanjaro"
-      description: "A nodejs based billing system"
+      name: billimanjaro/billimanjaro
+      description: A nodejs based billing system
     notification_email: lord2800@gmail.com
-    build_command_prepend: "npm install"
-    build_command:   "npm test"
-    branch_pattern: "tags/\.*"
+    build_command_prepend: npm install
+    build_command: npm test
+    branch_pattern: tags/\.*
+notifications:
+  slack:
+    secure: fxlZF300yGU8tH0lO+VWS9Ox6L85saOXI/k1tc9ZDDjVDvTzGKHRnIazVHVA6k3VPDdDQ8gbaNLfOMe2etaWyEWd5zXkcpc4FQ3sO20iVN3utYPOkr5Ufv3+yxpF3EIcEEomKtrlHKnWs3OElulVlF4tNzHZFoeybxX7GINGOnUYfVOk4IFx6+BRpHy898EtKpPsoR6VnCZR/+i/B7J+FR1LZm1CYQQcy/3HBZsQFvl91A13iD+AtQYuVbgnWHheUQO3doBrE6bJz8EvwZ90rjVke/bHZFJfCXitH2qWGWMUIKTm85Fi2FDFeHGBXklLrPuADCcqMJrndHNgJi/vYxDCpA3Lo7kpV0fd3/eU830U0tAomdpjSFijWEjUvtHprqu4O3irkC4isFIf/ceZ8y0kcZzOQphV1IakG2dBlEjNMMulAydIjSSKohI5QF2/wnKS+qY7i4uvFKibVlXDJDEwFK4PaGXKfXRCaXwSmNttt7SRFe2uuqpb9qAu2e5MqhXIbx0IMlVaNuwJO5J9naF/0EecB6P+cPQD2fBoK8pRu1MLxNsjsdtX3ntM7Q1FKW76nbhNReRkqeunwxKMZs+hVmMlP0smhTlPIy7juflqvxV4ed8/nqzv+fMdpBD3UppkKAGz5pFaXSRzcoMonm9nskNf9FRSVlMc98LHtx0=
