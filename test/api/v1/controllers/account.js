@@ -76,7 +76,7 @@ describe('v1 account api controller', function () {
 		});
 	});
 	describe('delete action', function () {
-		it('should send a 204 with no content', function () {
+		context('when successful', function () {
 			var sendMock = spy();
 			var statusMock = spy().return({ 'send': sendMock });
 
@@ -87,10 +87,19 @@ describe('v1 account api controller', function () {
 
 			controller.delete(requestMock, responseMock);
 
-			assert.equal(1, statusMock.called, 'status not called');
-			assert.equal(true, statusMock.calledWith(204), 'status called with wrong code');
-			assert.equal(1, sendMock.called, 'send not called');
-			assert.equal(undefined, sendMock.calledArgs[0][0]);
+			it('should send a 204', function () {
+				assert.equal(1, statusMock.called, 'status not called');
+				assert.equal(true, statusMock.calledWith(204), 'status called with wrong code');
+			});
+
+			it('should have no content', function () {
+				assert.equal(1, sendMock.called, 'send not called');
+				assert.equal(undefined, sendMock.calledArgs[0][0]);
+			});
+		});
+		context('when unsuccessful', function () {
+			it('should respond with a 404 for not found');
+			it('should respond with a 520 for all other cases');
 		});
 	});
 });
