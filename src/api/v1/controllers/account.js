@@ -24,26 +24,28 @@ var accountStub = {
 	}]
 };
 
+var status = require('http-status');
+
 function AccountController() {/* this space intentionally left blank */}
 
 AccountController.prototype.list = function (req, res) {
-	res.status(200).send([accountStub, accountStub]);
+	res.status(status.OK).send([accountStub, accountStub]);
 };
 
 AccountController.prototype.get = function (req, res) {
-	res.status(200).send(accountStub);
+	res.status(status.OK).send(accountStub);
 };
 
 AccountController.prototype.put = function (req, res) {
-	res.status(200).send(accountStub);
+	res.status(status.OK).send(accountStub);
 };
 
 AccountController.prototype.post = function (req, res) {
-	res.status(200).send(accountStub);
+	res.status(status.OK).send(accountStub);
 };
 
 AccountController.prototype.delete = function (req, res) {
-	res.status(204).send();
+	res.status(status.NO_CONTENT).send();
 };
 
 module.exports = new AccountController();

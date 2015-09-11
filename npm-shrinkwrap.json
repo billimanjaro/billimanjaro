@@ -239,6 +239,11 @@
         }
       }
     },
+    "http-status": {
+      "version": "0.2.0",
+      "from": "http-status@*",
+      "resolved": "https://registry.npmjs.org/http-status/-/http-status-0.2.0.tgz"
+    },
     "morgan": {
       "version": "1.6.1",
       "from": "morgan@*",

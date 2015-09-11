@@ -6,22 +6,24 @@ var featureStub = {
 	"dependencies": ["basic-site"]
 };
 
+var status = require('http-status');
+
 function FeatureController() {/* this space intentionally left blank */}
 
 FeatureController.prototype.list = function (req, res) {
-	res.status(200).send([featureStub, featureStub, featureStub, featureStub, featureStub]);
+	res.status(status.OK).send([featureStub, featureStub, featureStub, featureStub, featureStub]);
 };
 
 FeatureController.prototype.get = function (req, res) {
-	res.status(200).send(featureStub);
+	res.status(status.OK).send(featureStub);
 };
 
 FeatureController.prototype.post = function (req, res) {
-	res.status(200).send(featureStub);
+	res.status(status.OK).send(featureStub);
 };
 
 FeatureController.prototype.delete = function (req, res) {
-	res.status(204).send();
+	res.status(status.NO_CONTENT).send();
 };
 
 module.exports = new FeatureController();
