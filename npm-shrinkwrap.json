@@ -241,7 +241,7 @@
     },
     "http-status": {
       "version": "0.2.0",
-      "from": "http-status@*",
+      "from": "https://registry.npmjs.org/http-status/-/http-status-0.2.0.tgz",
       "resolved": "https://registry.npmjs.org/http-status/-/http-status-0.2.0.tgz"
     },
     "morgan": {

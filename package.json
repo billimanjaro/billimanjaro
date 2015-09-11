@@ -38,11 +38,13 @@
     "mocha": "^2.2.5",
     "mocha-eslint": "^1.0.0",
     "mocha-istanbul": "^0.2.0",
-    "proxyquire": "^1.7.1"
+    "proxyquire": "^1.7.1",
+    "pre-commit": "^1.1.1"
   },
   "dependencies": {
     "express": "^4.13.3",
     "http-status": "^0.2.0",
     "morgan": "^1.6.1"
-  }
+  },
+  "pre-commit": ["test"]
 }
